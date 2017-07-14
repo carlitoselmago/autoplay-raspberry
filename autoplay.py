@@ -34,7 +34,7 @@ while True:
 				if match:
 					fileCount+=1
 					if newMedia:
-						command="xdg-open "+fileURI+"  >/dev/null"
+						command="omxplayer -b "+fileURI+"  >/dev/null"
 						p = subprocess.Popen(command, stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=True)
 						(output, err) = p.communicate()  
 						p_status = p.wait()
